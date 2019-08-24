@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Bücher</title>
+		<link rel="stylesheet" href="css/design.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Cormorant&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	<div id="base">
+	<div id="overlay">
+		<header>
+			<h1 >Bücher</h1>
+		</header>
+		
+		<nav>
+			<ul>
+				<li>
+					<a href="start">Startseite</a>
+				</li>
+				<li>
+					<a href="buchListe">Bücherliste</a>
+				</li>
+				<li>
+					<a href="buchFormular">Neues Buch</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<main>
+			<table class="content-table">
+				<thead>
+					<tr>
+						<th>Index</th>
+						<th>Titel</th>
+						<th>Autor</th>
+						<th>Preis</th>
+						<th>EAN</th>
+						<th>Erscheinungsdatum</th>
+						<th>Typ</th>
+						<th>Aktionen</th>
+					</tr>
+				</thead>
+					
+				<tbody>
+					<tr th:each="buecher : ${buchListe}">
+						<td th:text="${buecher.buchid}">Index</td>
+						<td th:text="${buecher.titel}">Titel</td>
+						<td th:text="${buecher.autor}">Autor</td>
+						<td th:text="${#numbers.formatDecimal(buecher.preis,1,2) + ' €'}">Preis</td>
+						<td th:text="${buecher.ean}">EAN</td>
+						<td th:text="${#dates.format(buecher.erscheinungsdatum,'dd-MMM-yyyy')}">Erscheinungsdatum</td>
+						<td th:text="${buecher.typ}">Typ</td>
+						<td>
+							<a th:href="@{'/bearbeiten/' + ${buecher.buchid}} ">Bearbeiten</a>
+							<a th:href="@{'/loeschen/' + ${buecher.buchid}} ">Löschen</a>
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+			
+		</main>
+		
+		</div>
+	</div>
+	</body>
+</html>

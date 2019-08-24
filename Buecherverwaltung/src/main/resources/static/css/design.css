@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+/*Formatierung für den Header*/
+
+header {
+	display:flex;
+	justify-content: center;
+	color: white;
+	opacity: .8;
+	font-family: 'Cormorant', serif;
+	margin-top:2%;
+	margin-left: 10px;
+	 font-size: 1.3em;
+}
+
+/*Formatierung für die Navigationsleiste*/
+
+nav li{
+	list-style-type: none;
+    display: inline;
+    margin: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+    opacity: .8;
+    border-top: 1px solid #3A3A3C;
+    border-bottom: 1px solid #3A3A3C;
+    
+}
+
+nav li:hover{
+	border-color: white;
+}
+
+nav a, nav a:visited{
+     color: white;
+     text-decoration:none;
+}
+
+nav ul{
+    display: flex;
+ 	 align-items: center;
+    justify-content: center;
+    position: relative;
+    left:-16px;
+    
+}
+
+/*Formatierung für den Hauptinhalt*/
+
+main{
+	display:flex;
+	justify-content: center;
+	color:white;
+}
+
+body{
+	margin:0;
+	font-family: 'Cormorant', serif;
+	 font-size: 1.3em;
+}
+
+#base{
+	background-image:url("../img/bib.jpg");
+	background-size:cover;
+	background-position: center center;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	height: 100vh;
+}
+
+#overlay{
+	position: absolute;
+	background-color: rgba(0,0,0,0.8);
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+}
+
+/*Formatierung für dir Tabelle*/
+
+table{
+	font-family: 'Cormorant', serif;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+ 
+  min-width: 400px;
+   border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #3A3A3C;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody, .content-table tbody a, .content-table tbody a:visited{
+	color:black;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: white;
+}
+.content-table tbody tr:nth-of-type(odd) {
+  background-color: WhiteSmoke;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid black;
+}
+
+/*Formatierung für das Formular und die Erroranzeige*/
+
+form , #error{
+	padding: 30px;
+	padding-bottom: 15px;
+	background-color: #3A3A3C;
+	padding: 2vw;
+	border-radius: 10px;
+	 font-size: 1.3em;
+}
+
+
+#speichern{
+	justify-content: center;
+	text-align: center;
+}
+
+input{
+	background-color: #3A3A3C;
+	border:none;
+	border-bottom: 1px solid white;
+	color: white;
+}
+
+#id{
+	border:none;
+}
+
+button{
+	border-radius:10px;
+	 font-size: 0.8em;
+	font-family: 'Cormorant', serif;
+	background-color:white;
+}
+
+.divsubmit{
+	display:flex;
+	justify-content:center;
+	margin-top:15px;
+	margin-bottom:0px;
+}
+
+
+/*Formatierung für die Startseite*/
+
+#dash{
+	display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box, .box a:visited{
+	display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+    background-color: #3A3A3C;
+    color: white;
+	opacity: .8;
+	border-radius:10px;
+	font-size:1.5em;
+	text-decoration:none;
+}
+
+.box:hover{
+	opacity: 1;
+}
+
+.box a {
+	text-decoration:none;
+}	
+
+#vertikal{
+	position: relative;
+top: 20%;
+-webkit-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+
+
+#vertikal a:visited{
+	text-decoration:none;
+}
+
+
+
+

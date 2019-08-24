@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Buchbearbeitung</title>
+		<link rel="stylesheet" href="../css/design.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Cormorant&display=swap" rel="stylesheet">
+	</head>
+	<body>
+	<div id="base">
+	<div id="overlay">
+		<header>
+			<h1> Buch bearbeiten</h1>
+		</header>
+		
+		<nav>
+			<ul>
+				<li>
+					<a href="../start">Startseite</a>
+				</li>
+				<li>
+					<a href="../buchListe">Bücherliste</a>
+				</li>
+				<li>
+					<a href="../buchFormular">Neues Buch</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<main>
+			<form action="#" th:action="@{/speichern}" th:object="${buch}" method = "POST">
+				<table>
+					<tr>
+						<td>Buch ID:</td>
+						<td><input id="id" type="text" th:field="*{buchid}" readonly="readonly" required/></td>
+					</tr>
+					<tr>
+						<td>Buchtitel:</td>
+						<td><input type="text" autocomplete="off" th:field="*{titel}" required/></td>
+					</tr>
+					<tr>
+						<td>Autor:</td>
+						<td><input type="text" autocomplete="off" th:field="*{autor}" required/></td>
+					</tr>
+					<tr>
+						<td>Preis:</td>
+						<td><input type="number" autocomplete="off" th:field="*{preis}" required/></td>
+					</tr>
+					<tr>
+						<td>EAN:</td>
+						<td><input type="number" autocomplete="off" th:field="*{ean}" required/></td>
+					</tr>
+					<tr>
+						<td>Erscheinungsdatum:</td>
+						<td><input type="date" th:field="*{erscheinungsdatum}" required/></td>
+					</tr>
+					<tr>
+						<td>Typ:</td>
+						<td><input type="text" autocomplete="off" th:field="*{typ}" required/></td>
+					</tr>
+				</table>
+				
+				<div class="divsubmit">
+					<button	class="submit"   type="submit">Speichern</button>
+				</div>
+			</form>
+		</main>
+		</div>
+	</div>
+	</body>
+</html>
