@@ -1,5 +1,5 @@
 # webanwendung-buecherverwaltung
-<em>Einfache Bücherverwaltung (Webanwendung) mit Spring Boot, Hibernate, Thymeleaf, Spring Data JPA, Spring Data Web, H2/MySQL</em>
+<em>Einfache Bücherverwaltung (Webanwendung) mit Spring Boot, Hibernate, Thymeleaf, Spring Data JPA, Spring Starter Web, H2/MySQL</em>
 
 
 <strong>Starten der Anwendung:</strong>
