@@ -36,7 +36,7 @@ public class BuecherverwaltungController {
 		return "buchListe";
 	}
 	
-	@GetMapping(value="/buchListeGeordnet")
+	@GetMapping(value="/buchListeGeordnetPreis")
 	public String ordneBuchListe(Model model) {
 		List<Buch> buchListe = service.findAllByOrderByPreisAsc();
 		model.addAttribute("buchListe", buchListe);
